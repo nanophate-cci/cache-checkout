@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/ruby:3.2.2
     steps:
       - restore_cache:
           name: restore git cache
