@@ -9,13 +9,14 @@ jobs:
       - restore_cache:
           name: restore git cache
           keys:
-            - repo-v1-{{ arch }}-{{ .Branch }}-{{ .Revision }}
+            #- repo-v1-{{ arch }}-{{ .Branch }}-{{ .Revision }}
             - repo-v1-{{ arch }}-{{ .Branch }}
             - repo-v1-{{ arch }}
       - checkout
       - save_cache:
           name: save git cache
-          key: repo-v1-{{ arch }}-{{ .Branch }}-{{ .Revision }}
+          #key: repo-v1-{{ arch }}-{{ .Branch }}-{{ .Revision }}
+          key: repo-v1-{{ arch }}-{{ .Branch }}
           paths:
             - ".git"
       - run: git remote
