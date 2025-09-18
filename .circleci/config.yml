@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       - image: cimg/base:current
-    parallelism: 2
+    #parallelism: 2
     steps:
       - restore_cache:
           name: restore git cache
